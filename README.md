@@ -11,7 +11,7 @@ The goal of this project is to deepen my understanding of Next.js and apply it i
    ## 1. Run npm i to install the project packages.
 
    ```bash
-   make install
+   npm i
    ```
    1. 
    1. 
