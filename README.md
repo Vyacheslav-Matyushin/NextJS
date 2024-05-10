@@ -6,10 +6,14 @@ During the project, I study the basics of Next.js, including static page generat
 
 The goal of this project is to deepen my understanding of Next.js and apply it in practice. I hope that with the help of this project, I will be able to understand how Next.js can help in web application development and how to utilize its features to create powerful and modern web pages.
 
-<details><summary>A dropdown list for markdown</summary>
+<details><summary>Installation and configuration steps</summary>
 
-   1. First item must be preceeded with an empty line.
-   1. Markdown renders **perfectly**.
-   1. Extra item.
+   ## 1. Run npm i to install the project packages.
 
-</details>
+   ```bash
+   make install
+   ```
+   1. 
+   1. 
+
+</details
