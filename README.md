@@ -8,8 +8,7 @@ The goal of this project is to deepen my understanding of Next.js and apply it i
 
 <details><summary>Installation and configuration steps</summary>
 
-   ## 1. Run npm i to install the project packages.
-
+   1. Run npm i to install the project packages.
    ```bash
    npm i
    ```
