@@ -1,7 +1,10 @@
 import { CheckIcon, ClockIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 
-export default function InvoiceStatus({ status }: { status: string }) {
+export default function InvoiceStatus({ status, isDisabled = true }: { status: string, isDisabled?: boolean }) {
+	if (isDisabled) {
+		return null;
+	}
   return (
     <span
       className={clsx(
