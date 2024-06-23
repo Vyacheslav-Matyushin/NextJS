@@ -13,27 +13,48 @@ import clsx from 'clsx';
  
 export default function NavLinks() {
   const pathname = usePathname();
- 
+
   return (
-    <>
-      {links.map((link) => {
-        const LinkIcon = link.icon;
-        return (
-          <Link
-            key={link.name}
-            href={link.href}
-            className={clsx(
-              'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3',
-              {
-                'bg-sky-100 text-blue-600': pathname === link.href,
-              },
-            )}
-          >
-            <LinkIcon className="w-6" />
-            <p className="hidden md:block">{link.name}</p>
-          </Link>
-        );
-      })}
-    </>
+	<nav className="flex flex-col space-y-1">
+	  <Link
+		href="/dashboard"
+		className={clsx(
+		  'flex items-center rounded-md p-2 text-sm font-medium',
+		  {
+			'bg-blue-600 text-white': pathname === '/dashboard',
+			'text-blue-600 hover:bg-blue-500 hover:text-white': pathname !== '/dashboard',
+		  },
+		)}
+	  >
+		<HomeIcon className="w-5" />
+		<span className="ml-3 hidden md:block">Home</span>
+	  </Link>
+	  <Link
+		href="/dashboard/customers"
+		className={clsx(
+		  'flex items-center rounded-md p-2 text-sm font-medium',
+		  {
+			'bg-blue-600 text-white': pathname === '/dashboard/customers',
+			'text-blue-600 hover:bg-blue-500 hover:text-white': pathname !== '/dashboard/customers',
+		  },
+		)}
+	  >
+		<UserGroupIcon className="w-5" />
+		<span className="ml-3 hidden md:block">Customers</span>
+	  </Link>
+	  <Link
+		href="/dashboard/invoices"
+		className={clsx(
+		  'flex items-center rounded-md p-2 text-sm font-medium',
+		  {
+			'bg-blue-600 text-white': pathname === '/dashboard/invoices',
+			'text-blue-600 hover:bg-blue-500 hover:text-white': pathname !== '/dashboard/invoices',
+		  },
+		)}
+	  >
+		<DocumentDuplicateIcon className="w-5" />
+		<span className="ml-3 hidden md:block">Invoices</span>
+	  </Link>
+	</nav>
   );
 }
